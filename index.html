@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Profile Mock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <div class="header">
+      <span class="menu" id="menuToggle">&#9776;</span>
+      <h2 class="username">Akira</h2>
+    </div>
+    
+    <div class="profile-picture">
+      <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Profile Picture" />
+    </div>
+
+    <div class="stats">
+      <div><strong>0</strong><span>Posts</span></div>
+      <div id="followersBtn"><strong>1054</strong><span>Followers</span></div>
+      <div><strong>194</strong><span>Following</span></div>
+    </div>
+
+    <div class="bio">
+      <strong>Akira</strong>
+      <p>Akira</p>
+    </div>
+
+    <div class="buttons">
+      <button class="follow">Following</button>
+      <button class="message">Message</button>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight"><img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Highlight" /></div>
+      <div class="highlight"><img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Highlight" /></div>
+      <div class="highlight"><img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Highlight" /></div>
+      <div class="highlight"><img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Highlight" /></div>
+    </div>
+
+    <div class="no-posts">
+      <div class="camera">&#128247;</div>
+      <p>No Posts Yet</p>
+    </div>
+  </div>
+
+  <div class="dark-mode-toggle-container">
+    <button id="darkModeToggle">🌙 Switch</button>
+  </div>
+
+  <!-- Highlight Modal -->
+  <div class="modal hidden" id="highlightModal">
+    <div class="modal-content">
+      <img src="" alt="Enlarged Highlight" id="modalImage" />
+      <button id="closeModal">Exit</button>
+    </div>
+  </div>
+
+  <!-- Menu Modal -->
+  <div class="modal hidden" id="menuModal">
+    <div class="modal-content">
+      <div class="menu-scroll">
+        <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Pic1" />
+        <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Pic2" />
+        <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Pic3" />
+        <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Pic4" />
+        <img src="https://i.imgur.com/gh1Yruc.jpeg" alt="Pic5" />
+      </div>
+      <button id="closeMenu">Exit</button>
+    </div>
+  </div>
+
+  <!-- Followers Card -->
+  <div class="modal hidden" id="followersCard">
+    <div class="modal-content">
+      <ul>
+        <li><a href="https://xat.me/Akiiimitsu">Luna</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Nova</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Kai</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Zane</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Rhea</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Mira</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Lex</a></li>
+        <li><a href="https://xat.me/Akiiimitsu">Jade</a></li>
+      </ul>
+      <button id="closeFollowers">Exit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
