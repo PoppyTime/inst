@@ -1,0 +1,310 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f3f2;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}
+
+.profile-container {
+  width: 360px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.menu {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.profile-picture img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e3d9d5;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  cursor: default;
+}
+
+.stats div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.stats span {
+  display: block;
+  font-size: 13px;
+  color: gray;
+}
+
+.bio {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.bio p {
+  font-size: 13px;
+  color: #6b6b6b;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.buttons button {
+  width: 45%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #e6e0dc;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #d8d2cf;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+.highlight {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e6dfdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.highlight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.highlight:hover {
+  transform: scale(1.1);
+}
+
+.no-posts {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+}
+
+.camera {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.dark-mode-toggle-container {
+  margin-top: 20px;
+}
+
+#darkModeToggle {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #555;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+body.dark .profile-container {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .stats span,
+.bio p,
+.no-posts {
+  color: #ccc;
+}
+
+body.dark .buttons button {
+  background: #444;
+  color: #fff;
+}
+
+body.dark .buttons button:hover {
+  background: #555;
+}
+
+body.dark .highlight {
+  background: #444;
+}
+
+body.dark #darkModeToggle {
+  background: #ddd;
+  color: #000;
+}
+
+body.dark #darkModeToggle:hover {
+  background: #bbb;
+}
+
+/* Modal Base Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #000;
+  max-height: 80%;
+  overflow: auto;
+  width: 300px;
+}
+
+.modal-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.modal-content button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content ul li {
+  margin: 10px 0;
+}
+
+.modal-content ul a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.modal-content ul a:hover {
+  text-decoration: underline;
+}
+
+/* Menu Modal Scroll Area */
+.menu-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.menu-scroll img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Adjust for Dark Mode Modals */
+body.dark .modal-content {
+  background: rgba(40, 40, 40, 0.6);
+  color: #fff;
+}
+
+body.dark .modal-content ul a {
+  color: #fff;
+}
